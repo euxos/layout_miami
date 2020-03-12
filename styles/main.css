@@ -77,8 +77,8 @@ h1 {
     line-height: 16px;
     letter-spacing: 2px;
     border-bottom: 1px solid #fff;
-    -webkit-transition: all 0.35s;
-    transition: all 0.35s; }
+    -webkit-transition-duration: 0.35s;
+            transition-duration: 0.35s; }
     .header__link:hover {
       color: #9fadc2;
       border-color: #9fadc2; }
@@ -123,7 +123,8 @@ h1 {
           height: 18px;
           width: 18px;
           background: url(../images/phone.png) no-repeat center;
-          background-size: cover; }
+          background-size: cover;
+          cursor: pointer; }
       .header__logo {
         width: 73px;
         height: 48px; }
@@ -186,7 +187,9 @@ h1 {
     font-size: 22px;
     line-height: 22px; }
   .nav__item_active .nav__link {
-    background-color: transparent; } }
+    background-color: transparent; }
+  .nav__item_active:hover .nav__link {
+    color: #9fadc2; } }
 
 .logo {
   background: url(../images/logo.png) no-repeat center;
@@ -204,9 +207,11 @@ h1 {
 
 .menu__btn {
   position: relative;
+  padding: 8px 0;
   width: 18px;
   height: 2px;
   outline: none;
+  cursor: pointer;
   z-index: 1; }
 
 .menu__span::before {
@@ -259,7 +264,12 @@ h1 {
   padding-bottom: 8px;
   text-decoration: none;
   text-transform: uppercase;
-  border-bottom: 1px solid #fff; }
+  border-bottom: 1px solid #fff;
+  -webkit-transition-duration: 0.35s;
+          transition-duration: 0.35s; }
+  .menu__link:hover {
+    color: #9fadc2;
+    border-color: #9fadc2; }
 
 @media screen and (max-width: 870px) {
   .menu {
@@ -282,6 +292,8 @@ h1 {
       -webkit-transform: translate(-50%, 0);
               transform: translate(-50%, 0);
       background-color: #0075ff;
+      -webkit-box-shadow: 0 6px 23px rgba(0, 117, 255, 0.46);
+              box-shadow: 0 6px 23px rgba(0, 117, 255, 0.46);
       -webkit-transition-duration: 0.6s;
               transition-duration: 0.6s; }
     .menu__btn, .menu__logo, .menu__footer {
