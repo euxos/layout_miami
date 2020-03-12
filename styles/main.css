@@ -37,15 +37,25 @@ h1 {
   grid-template-columns: 1fr 1fr 1fr;
   background: url(../images/header.jpg) no-repeat center;
   background-size: cover;
-  font-size: 12px;
   font-weight: 600;
-  line-height: 16px;
   color: #fff; }
   .header__phone {
     justify-self: start;
     -ms-flex-item-align: center;
-        align-self: center;
-    letter-spacing: 2px; }
+        align-self: center; }
+  .header__phone-num, .header__link {
+    padding-bottom: 8px;
+    font-size: 12px;
+    line-height: 16px;
+    color: #fff;
+    letter-spacing: 2px;
+    text-decoration: none;
+    text-transform: uppercase;
+    -webkit-transition-duration: 0.35s;
+            transition-duration: 0.35s;
+    border-bottom: 1px solid transparent; }
+    .header__phone-num:hover, .header__link:hover {
+      border-bottom: 1px solid #fff; }
   .header__logo {
     justify-self: center;
     -ms-flex-item-align: center;
@@ -69,19 +79,6 @@ h1 {
         align-self: center;
     justify-self: end;
     position: relative; }
-  .header__link {
-    padding-bottom: 8px;
-    color: #fff;
-    text-decoration: none;
-    text-transform: uppercase;
-    line-height: 16px;
-    letter-spacing: 2px;
-    border-bottom: 1px solid #fff;
-    -webkit-transition-duration: 0.35s;
-            transition-duration: 0.35s; }
-    .header__link:hover {
-      color: #9fadc2;
-      border-color: #9fadc2; }
   .header__title {
     grid-column: 1 / -1;
     position: relative;
@@ -256,17 +253,20 @@ h1 {
   margin-top: 16px; }
 
 .menu__phone, .menu__link {
+  padding-bottom: 8px;
   color: #fff;
   font-size: 12px;
-  letter-spacing: 2px; }
-
-.menu__link {
-  padding-bottom: 8px;
+  letter-spacing: 2px;
   text-decoration: none;
   text-transform: uppercase;
-  border-bottom: 1px solid #fff;
   -webkit-transition-duration: 0.35s;
           transition-duration: 0.35s; }
+
+.menu__phone:hover {
+  color: #9fadc2; }
+
+.menu__link {
+  border-bottom: 1px solid #fff; }
   .menu__link:hover {
     color: #9fadc2;
     border-color: #9fadc2; }
@@ -278,8 +278,8 @@ h1 {
         align-self: center; }
     .menu__list {
       display: grid;
-      grid-template-rows: 48px 1fr auto;
-      row-gap: 48px;
+      grid-template-rows: 48px auto auto;
+      grid-row-gap: 48px;
       position: absolute;
       visibility: hidden;
       padding: 24px 21px 54px;
@@ -302,6 +302,9 @@ h1 {
 .logo {
   background: url(../images/logo.png) no-repeat center;
   background-size: cover; }
+
+.content {
+  padding: 104px 120px 88px; }
 
 html {
   font-family: "Roboto", sans-serif; }
