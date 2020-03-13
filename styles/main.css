@@ -38,6 +38,8 @@ a {
   position: relative;
   height: 700px;
   padding: 24px 120px 48px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   background: url(../images/header.jpg) no-repeat center;
   background-size: cover;
   font-weight: 600;
